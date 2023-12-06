@@ -9,5 +9,4 @@
 
 ### Plan
 
-* [button1](button1/)
-detect when the button is pressed
+* [button1](button1/) detect when the button is pressed
