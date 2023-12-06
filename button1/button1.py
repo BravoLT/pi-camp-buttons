@@ -11,7 +11,7 @@ GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 GPIO.add_event_detect(10, GPIO.RISING, callback=button_pressed)
 
-input("press any key to quit")
+input("press enter to quit\n\n")
 
 GPIO.cleanup()
 
