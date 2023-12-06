@@ -1,5 +1,12 @@
 # Button Exercise 1
 
+### Tools
+
+* 1x breadboard
+* 1x button
+* 2x jumper wires
+
+
 ### Setup
 
 ![Button Setup](help01.jpg)
