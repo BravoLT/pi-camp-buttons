@@ -5,7 +5,10 @@ light_on=False
 
 
 def button_pressed(channel):
+  global light_on  
+
   light_on=not light_on
+
   GPIO.output(18, light_on)
   
   if light_on:
