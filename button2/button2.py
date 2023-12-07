@@ -23,7 +23,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(18, GPIO.OUT)
 
-GPIO.add_event_detect(25, GPIO.RISING, callback=button_pressed)
+GPIO.add_event_detect(25, GPIO.RISING, callback=button_pressed, bouncetime=500)
 
 input("press enter to quit\n\n")
 
