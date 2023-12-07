@@ -1,17 +1,20 @@
 # Button Exercise 2 
 
-### Tools
+### New Tools
 
-* 1x breadboard
-* 1x button
-* 2x jumper wires
+* 1x 220 ohm resistor 
+* 1x led 
+* 3x jumper wires
 
 
 ### Setup
 
-![Button Setup](help02.jpg)
+![Light Setup](help01.png)
 
 
 ### Sources
 
-* https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/
+* https://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-4.0.pdf
+
+
+
