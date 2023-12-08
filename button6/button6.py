@@ -53,6 +53,9 @@ def setup_game():
   random.shuffle(sequence)
   
   all_lights(True)
+  time.sleep(0.5)
+  
+  all_lights(False)
 
 
 GPIO.setwarnings(False)
