@@ -1,11 +1,13 @@
 import RPi.GPIO as GPIO
+import random
 
 
-light_18_on=True
-light_23_on=True
+index=0
+sequence=random.shuffle(["25", "24", "16"])
 
 
 def button_25_pressed(channel):
+  print("channel: " + channel)
   print("button 25 pressed")
 
 
@@ -29,8 +31,9 @@ GPIO.add_event_detect(25, GPIO.RISING, callback=button_25_pressed, bouncetime=50
 GPIO.add_event_detect(24, GPIO.RISING, callback=button_24_pressed, bouncetime=500)
 GPIO.add_event_detect(16, GPIO.RISING, callback=button_16_pressed, bouncetime=500)
 
-GPIO.output(18, True)
-GPIO.output(23, True)
+GPIO.output(18, False)
+GPIO.output(23, False)
+GPIO.output(12, False)
 
 input("press enter to quit\n\n")
 
