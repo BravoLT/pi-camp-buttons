@@ -19,6 +19,10 @@
 ### Setup
 
 ![GPIO Reference](help5.png)
+![Code Diffy p1](diffy5-1.png)
+![Code Diffy p2](diffy5-2.png)
+![Code Diffy p3](diffy5-3.png)
+
 
 ### Sources
 
