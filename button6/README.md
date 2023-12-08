@@ -1,10 +1,10 @@
-# Button Exercise 5
+# Button Exercise 6 
 
 ### Objective
 
-1. toggle light 1 when button 1 is pressed
-2. toggle light 2 when button 2 is pressed
-3. toggle light 3 when button 3 is pressed
+* 3 lights are controlled by 3 buttons
+* the button that controls each light is random
+* press the buttons in the correct sequence to win the game
 
 
 ### New Tools
@@ -18,7 +18,7 @@
 
 ### Setup
 
-![GPIO Reference](help5.png)
+![GPIO Reference](help6.png)
 
 ### Sources
 

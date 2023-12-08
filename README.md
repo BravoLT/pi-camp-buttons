@@ -16,6 +16,7 @@
 * [button2](button2/) toggle a light when a button is pressed
 * [button3](button3/) toggle between 2 lights when a button is pressed
 * [button4](button4/) toggle 2 lights with 2 buttons
-* [button5](button5/) guess the correct sequence to win this game with 3 lights and 3 buttons
+* [button5](button5/) toggle 3 lights with 3 buttons
+* [button6](button6/) guess a random sequence to win a game
 
 
