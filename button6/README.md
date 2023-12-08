@@ -7,21 +7,11 @@
 * press the buttons in the correct sequence to win the game
 
 
-### New Tools
-
-* 1x 10k ohm resistor
-* 1x 220 ohm resistor
-* 1x button
-* 1x led
-* 3x jumper wires
-
-
 ### Setup
 
-![GPIO Reference](help6.png)
+![Code Diffy p1](diffy6-1.png)
+![Code Diffy p2](diffy6-2.png)
+![Code Diffy p3](diffy6-3.png)
 
-### Sources
-
-* https://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-4.0.pdf
 
 
