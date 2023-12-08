@@ -3,6 +3,11 @@ import random
 
 index=0
 sequence=[25, 24, 16]
+button_to_light_dict={
+  25: 18,
+  24: 23,
+  16: 12
+}
 
 random.shuffle(sequence)
 
@@ -16,7 +21,7 @@ def button_pressed(channel):
     print("you win!")
 
   elif channel == expected:
-    GPIO.output(channel, True)
+    GPIO.output(button_to_light_dict[channel], True)
     index += 1
   
   else:
