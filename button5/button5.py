@@ -1,22 +1,30 @@
 import RPi.GPIO as GPIO
 import random
 
-
 index=0
-sequence=random.shuffle(["25", "24", "16"])
+sequence=random.shuffle([25, 24, 16])
 
+def button_pressed(channel):
+  expected=sequence[index]
+  
+  if channel == expected and index == len(sequence):
+    print("you win!")
 
-def button_25_pressed(channel):
+  elif channel == expected:
+    index += 1
+  
+  else:
+    print("wrong sequence! try again")
+
+    GPIO.output(18, False)
+    GPIO.output(23, False)
+    GPIO.output(12, False)
+
+    index = 0
+    
+
   print("channel: " + channel)
   print("button 25 pressed")
-
-
-def button_24_pressed(channel):
-  print("button 24 pressed")
-
-
-def button_16_pressed(channel):
-  print("button 16 pressed")
 
 
 GPIO.setwarnings(False)
@@ -28,9 +36,9 @@ GPIO.setup(18, GPIO.OUT)
 GPIO.setup(23, GPIO.OUT)
 GPIO.setup(12, GPIO.OUT)
 
-GPIO.add_event_detect(25, GPIO.RISING, callback=button_25_pressed, bouncetime=500)
-GPIO.add_event_detect(24, GPIO.RISING, callback=button_24_pressed, bouncetime=500)
-GPIO.add_event_detect(16, GPIO.RISING, callback=button_16_pressed, bouncetime=500)
+GPIO.add_event_detect(25, GPIO.RISING, callback=button_pressed, bouncetime=500)
+GPIO.add_event_detect(24, GPIO.RISING, callback=button_pressed, bouncetime=500)
+GPIO.add_event_detect(16, GPIO.RISING, callback=button_pressed, bouncetime=500)
 
 GPIO.output(18, False)
 GPIO.output(23, False)
