@@ -9,8 +9,8 @@
 
 ### Setup
 
-![GPIO Reference](help01.png)
-![Code Diffy](diffy.png)
+![GPIO Reference](help3.png)
+![Code Diffy](diffy3.png)
 
 ### Sources
 

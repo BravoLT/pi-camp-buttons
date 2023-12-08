@@ -10,7 +10,7 @@
 
 ### Setup
 
-![Button Setup](help01.png)
+![Button Setup](help1.png)
 
 
 ### Sources

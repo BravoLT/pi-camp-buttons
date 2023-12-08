@@ -9,8 +9,8 @@
 
 ### Setup
 
-![Light Setup](help01.png)
-![Code Diffy](diffy.png)
+![Light Setup](help2.png)
+![Code Diffy](diffy2.png)
 
 ### Sources
 
