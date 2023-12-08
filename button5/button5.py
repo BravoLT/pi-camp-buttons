@@ -12,10 +12,11 @@ def button_pressed(channel):
 
   expected=sequence[index]
   
-  if channel == expected and index == len(sequence):
+  if channel == expected and index == len(sequence) - 1:
     print("you win!")
 
   elif channel == expected:
+    GPIO.output(channel, True)
     index += 1
   
   else:
