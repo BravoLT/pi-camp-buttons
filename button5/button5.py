@@ -2,9 +2,9 @@ import RPi.GPIO as GPIO
 
 
 button_to_light_dict={
-  25: { channel: 18, on: True }
-  24: { channel: 23, on: True }
-  16: { channel: 12, on: True }
+  25: { "channel": 18, "on": True },
+  24: { "channel": 23, "on": True },
+  16: { "channel": 12, "on": True }
 }
 
 
@@ -19,15 +19,15 @@ def button_pressed(channel):
 
   light=button_to_light_dict[channel]
 
-  if light.on:
-    light.on=False
-    GPIO.output(light.channel, False)
+  if light["on"]:
+    light["on"]=False
+    GPIO.output(light["channel"], False)
     print(f"light {light.chanel} off")
 
   else:
-    light.on=True
-    GPIO.output(light.channel, True)
-    print(f"light {light.channel} on")
+    light["on"]=True
+    GPIO.output(light["channel"], True)
+    print(f"light {light["channel"]} on")
   
 
 GPIO.setwarnings(False)
@@ -40,7 +40,7 @@ GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 GPIO.add_event_detect(25, GPIO.RISING, callback=button_pressed, bouncetime=500)
 GPIO.add_event_detect(24, GPIO.RISING, callback=button_pressed, bouncetime=500)
-GPIO.add_event_detect(16, GPIO.RISING, callback=button_pressed, boucnetime=500)
+GPIO.add_event_detect(16, GPIO.RISING, callback=button_pressed, bouncetime=500)
 
 # lights
 GPIO.setup(18, GPIO.OUT)
