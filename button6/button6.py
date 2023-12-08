@@ -27,15 +27,16 @@ def button_pressed(channel):
   expected=sequence[index]
   
   if channel == expected and index == len(sequence) - 1:
-    print("you win! play again?")
+    print("you win!")
 
-    for step in range(5):
+    for step in range(10):
       all_lights(True)
-      time.sleep(1)
+      time.sleep(0.2)
 
       all_lights(False)
-      time.sleep(1)
+      time.sleep(0.2)
 
+    print("play again?")
     setup_game()
 
   elif channel == expected:
@@ -48,6 +49,9 @@ def button_pressed(channel):
 
 
 def setup_game():
+  global index
+  global sequence
+
   index=0
 
   random.shuffle(sequence)
