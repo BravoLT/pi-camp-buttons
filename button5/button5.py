@@ -18,16 +18,18 @@ def button_pressed(channel):
   global button_to_light_dict  
 
   light=button_to_light_dict[channel]
+  light_channel=light["channel"]
+
 
   if light["on"]:
     light["on"]=False
-    GPIO.output(light["channel"], False)
-    print(f"light {light.chanel} off")
+    GPIO.output(light_channel, False)
+    print(f"light {light_channel} off")
 
   else:
     light["on"]=True
-    GPIO.output(light["channel"], True)
-    print(f"light {light["channel"]} on")
+    GPIO.output(light_channel, True)
+    print(f"light {light_channel} on")
   
 
 GPIO.setwarnings(False)
