@@ -9,7 +9,7 @@ toggle a light when a button is pressed
 
 * 1x 220 ohm resistor 
 * 1x led 
-* 3x jumper wires
+* 3x jumper wires (male-to-female)
 
 
 ### Setup

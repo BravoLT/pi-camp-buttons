@@ -2,12 +2,26 @@
 
 ### Combined Tools
 
-* 1x 10k ohm resistor
-* 1x 220 ohm resistor
+* 3x 10k ohm resistor
+* 3x 220 ohm resistor 
 * 1x breadboard
-* 1x button
-* 1x led
-* 5x jumper wires
+* 3x button
+* 3x led 
+* 8x jumper wires (male-to-female)
+* 3x jumper wires (male-to-male)
+
+
+>Hints
+>
+>Each Button:
+>  * 10k ohm resistor
+>  * jumper wire (male-to-female)
+>  * jumper wire (male-to-male)
+>
+>Each Light:
+>  * 220 ohm resistor
+>  * jumper wire (male-to-female)
+>
 
 
 ### Plan

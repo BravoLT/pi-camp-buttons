@@ -13,7 +13,8 @@
 * 1x 220 ohm resistor
 * 1x button
 * 1x led
-* 3x jumper wires
+* 2x jumper wires (male-to-female)
+* 1x jumper wire (male-to-male)
 
 
 ### Setup

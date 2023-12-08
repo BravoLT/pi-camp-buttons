@@ -10,7 +10,8 @@ print a message when a button is pressed
 * 1x 10k ohm resistor
 * 1x breadboard
 * 1x button
-* 2x jumper wires
+* 1x jumper wire (male-to-female)
+* 1x jumper wire (male-to-male)
 
 
 ### Setup
