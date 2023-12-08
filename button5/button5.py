@@ -1,5 +1,7 @@
 import RPi.GPIO as GPIO
 import random
+import time
+
 
 index=0
 sequence=[25, 24, 16]
@@ -9,7 +11,15 @@ button_to_light_dict={
   16: 12
 }
 
+
 random.shuffle(sequence)
+
+
+def all_lights(value):
+  GPIO.output(18, value)
+  GPIO.output(23, value)
+  GPIO.output(12, value)
+
 
 def button_pressed(channel):
   global index
@@ -20,17 +30,20 @@ def button_pressed(channel):
   if channel == expected and index == len(sequence) - 1:
     print("you win!")
 
+    for step in range(5):
+      all_lights(True)
+      time.sleep(1)
+
+      all_lights(False)
+      time.sleep(1)
+
   elif channel == expected:
     GPIO.output(button_to_light_dict[channel], True)
     index += 1
   
   else:
     print("wrong sequence! try again")
-
-    GPIO.output(18, False)
-    GPIO.output(23, False)
-    GPIO.output(12, False)
-
+    all_lights(False)
     index = 0
     
 
@@ -47,9 +60,7 @@ GPIO.add_event_detect(25, GPIO.RISING, callback=button_pressed, bouncetime=500)
 GPIO.add_event_detect(24, GPIO.RISING, callback=button_pressed, bouncetime=500)
 GPIO.add_event_detect(16, GPIO.RISING, callback=button_pressed, bouncetime=500)
 
-GPIO.output(18, False)
-GPIO.output(23, False)
-GPIO.output(12, False)
+all_lights(True)
 
 input("press enter to quit\n\n")
 
