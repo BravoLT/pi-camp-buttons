@@ -26,6 +26,7 @@ GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(18, GPIO.OUT)
 GPIO.setup(23, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
 
 GPIO.add_event_detect(25, GPIO.RISING, callback=button_25_pressed, bouncetime=500)
 GPIO.add_event_detect(24, GPIO.RISING, callback=button_24_pressed, bouncetime=500)
