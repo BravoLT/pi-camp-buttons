@@ -2,9 +2,14 @@ import RPi.GPIO as GPIO
 import random
 
 index=0
-sequence=random.shuffle([25, 24, 16])
+sequence=[25, 24, 16]
+
+random.shuffle(sequence)
 
 def button_pressed(channel):
+  global index
+  global sequence  
+
   expected=sequence[index]
   
   if channel == expected and index == len(sequence):
@@ -22,10 +27,6 @@ def button_pressed(channel):
 
     index = 0
     
-
-  print("channel: " + channel)
-  print("button 25 pressed")
-
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
