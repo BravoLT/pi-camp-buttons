@@ -1,4 +1,9 @@
-# Button Exercise 2 
+# Button Exercise 3
+
+### Objective
+
+toggle 2 lights when a button is pressed
+
 
 ### New Tools
 

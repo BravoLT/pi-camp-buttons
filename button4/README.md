@@ -1,4 +1,10 @@
-# Button Exercise 2 
+# Button Exercise 4
+
+### Objective
+
+1. toggle light 1 when button 1 is pressed
+2. toggle light 2 when button 2 is pressed
+
 
 ### New Tools
 

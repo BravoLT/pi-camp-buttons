@@ -1,5 +1,10 @@
 # Button Exercise 1
 
+### Objective
+
+print a message when a button is pressed
+
+
 ### Tools
 
 * 1x 10k ohm resistor
