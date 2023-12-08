@@ -27,7 +27,7 @@ def button_pressed(channel):
   expected=sequence[index]
   
   if channel == expected and index == len(sequence) - 1:
-    print("you win!")
+    print("you win! play again?")
 
     for step in range(5):
       all_lights(True)
@@ -36,17 +36,24 @@ def button_pressed(channel):
       all_lights(False)
       time.sleep(1)
 
+    setup_game()
+
   elif channel == expected:
     GPIO.output(button_to_light_dict[channel]["channel"], True)
     index += 1
   
   else:
     print("wrong sequence! try again")
-    all_lights(False)
-    index = 0
-    
+    setup_game()
 
-random.shuffle(sequence)
+
+def setup_game():
+  index=0
+
+  random.shuffle(sequence)
+  
+  all_lights(True)
+
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -65,7 +72,7 @@ GPIO.setup(18, GPIO.OUT)
 GPIO.setup(23, GPIO.OUT)
 GPIO.setup(12, GPIO.OUT)
 
-all_lights(True)
+setup_game()
 
 input("press enter to quit\n\n")
 
