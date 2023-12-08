@@ -10,8 +10,8 @@
 ### Setup
 
 ![GPIO Reference](help4.png)
-![Code Diffy p1](diffy4.1.png)
-![Code Diffy p2](diffy4.2.png)
+![Code Diffy p1](diffy4-1.png)
+![Code Diffy p2](diffy4-2.png)
 
 ### Sources
 
